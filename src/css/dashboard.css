@@ -1,0 +1,35 @@
+@import url("./main.css");
+
+#dashboard {
+    flex: 1;
+    padding: var(--spacing1);
+}
+
+#start-project {
+    text-align: center;
+}
+
+#start-project h2 {
+    font-size: 2.5rem;
+}
+
+#start-project p {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+
+#start-project #film-word {
+    color: var(--color2);
+}
+
+#start-project button {
+    font-family: "Instrument Serif", serif;
+    font-size: 1.5rem;
+    padding: 0.25em 1em;
+    color: var(--color3);
+    background: var(--color2);
+}
+
+#start-project button:hover {
+    background: var(--color2Hover);
+}

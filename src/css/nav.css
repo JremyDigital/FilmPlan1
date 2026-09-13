@@ -1,0 +1,25 @@
+@import url("./main.css");
+
+nav {
+    padding: var(--spacing1);
+}
+
+nav #logo {
+    font-family: "Instrument Serif";
+    font-size: 1.75rem;
+    color: var(--color4);
+}
+
+nav button {
+    font-family: "Instrument Serif";
+    padding: 0.25em 1em;
+    color: var(--color1);
+    background: var(--color4);
+    font-size: 1.2rem;
+    letter-spacing: -0.1px;
+}
+
+nav button:hover {
+    transform: scale(1.05);
+    background: var(--color3);
+}
