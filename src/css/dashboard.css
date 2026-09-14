@@ -10,12 +10,13 @@
 }
 
 #start-project h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 #start-project p {
     font-size: 1.25rem;
     margin-bottom: 1em;
+    font-weight: 300;
 }
 
 #start-project #film-word {
@@ -31,5 +32,43 @@
 }
 
 #start-project button:hover {
-    background: var(--color2Hover);
+    color: var(--color1);
+    background: var(--color4);
+}
+
+#film-form {
+    width: clamp(300px, 90%, 900px);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.15rem;
+}
+
+#film-form h2 {
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    color: var(--color3);
+}
+
+#film-form input,
+#film-form textarea,
+#film-form select {
+    border: none;
+    border-radius: var(--box-radius);
+    font-size: 1.1rem;
+    font-family: "DM Sans", sans-serif;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0.25em;
+}
+
+#film-form label {
+    color: var(--color4);
+}
+
+#film-form button {
+    font-size: 1.5rem;
+    padding: 0.5em;
+    color: var(--color3);
+    background: var(--color2);
+    font-family: "Instrument Serif";
 }

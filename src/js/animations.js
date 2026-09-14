@@ -1,27 +1,28 @@
-export function animateNav() {
+export function startAnimations() {
+    animateNav();
+    animateStartProject();
+    buttonHoverAnimation();
+}
+
+function animateNav() {
     const nav = gsap.timeline();
 
     nav.from("#logo", {
         y: -20,
         opacity: 0,
-        duration: 0.6,
+        duration: 1,
         ease: "power2.out",
     });
 
-    nav.from(
-        "#options",
-        {
-            y: -20,
-            opacity: 0,
-            duration: 0.4,
-            stagger: 0.1,
-            ease: "power2.out",
-        },
-        "-=0.3",
-    );
+    nav.from("#options", {
+        y: -20,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power3.out",
+    });
 }
 
-export function animateStartProject() {
+function animateStartProject() {
     const startProject = gsap.timeline();
 
     startProject.from("#start-project h2", {
@@ -51,10 +52,9 @@ export function animateStartProject() {
     );
 }
 
-export function buttonHoverAnimation() {
-    const button = document.querySelector("#create-project");
-
-    const text = button.querySelector("span");
+function buttonHoverAnimation() {
+    const button = document.querySelector("#create-project-btn");
+    const text = document.querySelector("#create-word");
 
     button.addEventListener("mouseenter", () => {
         gsap.to(button, {
@@ -85,4 +85,42 @@ export function buttonHoverAnimation() {
             ease: "power3.out",
         });
     });
+}
+
+export function animateFilmForm(form) {
+    const fields = form.querySelectorAll("h2, label, input, select, textarea, button");
+
+    const timeline = gsap.timeline();
+
+    timeline.fromTo(
+        form,
+        {
+            opacity: 0,
+            y: 40,
+            scale: 0.96,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.6,
+            ease: "power3.out",
+        },
+    );
+
+    timeline.fromTo(
+        fields,
+        {
+            opacity: 0,
+            y: 15,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.35,
+            stagger: 0.06,
+            ease: "power2.out",
+        },
+        "-=0.3",
+    );
 }

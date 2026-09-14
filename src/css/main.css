@@ -3,11 +3,9 @@
 :root {
     /* Colors */
     --color1: hsl(0, 0%, 13%);
-    --color2: hsl(241, 77%, 73%);
+    --color2: hsl(224, 50%, 48%);
     --color3: hsl(257, 100%, 99%);
-    --color4: hsl(176, 83%, 91%);
-
-    --color2Hover: hsl(241, 33%, 45%);
+    --color4: hsl(224, 100%, 89%);
 
     /* Spacing */
     --spacing1: 1em;

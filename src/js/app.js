@@ -1,13 +1,10 @@
-import { animateNav, animateStartProject, buttonHoverAnimation } from "./animations.js";
+import { startAnimations } from "./animations.js";
+import { handleNavEvents } from "./events/navEvents.js";
+import { handleDashEvents } from "./events/dashboardEvents.js";
 
-// Initial page load animations
-animateNav();
-animateStartProject();
-buttonHoverAnimation();
+// initial page load animations
+startAnimations();
 
-// Event Listeners for initial dashboard buttons
-const viewProjectsBtn = document.getElementById("view-projects-btn");
-viewProjectsBtn.addEventListener("click", (e) => {});
-
-const createProjectBtn = document.getElementById("create-project-btn");
-createProjectBtn.addEventListener("click", (e) => {});
+// activate event handlers
+handleNavEvents();
+handleDashEvents();
